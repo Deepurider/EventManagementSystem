@@ -1,0 +1,27 @@
+﻿@model Event
+@{
+    ViewData["Title"] = "Edit Event";
+}
+
+<h2 class="text-center mt-4">Edit Event</h2>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form asp-action="Edit" method="post">
+            <input asp-for="Id" type="hidden" />
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label"></label>
+                <input asp-for="Title" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+            </div>
+            <div class="mb-3">
+                <label asp-for="EventDate" class="form-label"></label>
+                <input asp-for="EventDate" type="date" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+        </form>
+    </div>
+</div>

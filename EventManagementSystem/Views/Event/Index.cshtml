@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Event>
+@{
+    ViewData["Title"] = "Event List";
+}
+
+<h2 class="text-center mt-4">Event List</h2>
+
+<a asp-controller="User" asp-action="Logout" class="btn btn-danger mb-3">Logout</a>
+
+<!-- Page Header -->
+<div class="container my-5">
+    <div class="row">
+        <div class="col text-center">
+            <h1 class="display-4">Upcoming Events</h1>
+            <p class="lead">Manage all your college events below. You can edit or delete them as needed.</p>
+            <a href="@Url.Action("Create", "Event")" class="btn btn-primary btn-lg mb-4">Create New Event</a>
+        </div>
+    </div>
+
+    <!-- Events Grid -->
+    <div class="row">
+        @foreach (var eventItem in Model)
+        {
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <!-- Event Image (optional) -->
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Event Image">
+
+                    <div class="card-body">
+                        <h5 class="card-title">@eventItem.Title</h5>
+                        <p class="card-text text-muted">@eventItem.EventDate.ToString("MMM dd, yyyy")</p>
+                        <p class="card-text">@eventItem.Description</p>
+                    </div>
+
+                    <div class="card-footer d-flex justify-content-between">
+                        <a href="@Url.Action("Edit", "Event", new { id = eventItem.Id })" class="btn btn-sm btn-warning">
+                            <i class="fas fa-edit"></i> Edit
+                        </a>
+                        <form method="post" action="@Url.Action("Delete", "Event", new { id = eventItem.Id })" onsubmit="return confirm('Are you sure you want to delete this event?');">
+                            <button type="submit" class="btn btn-sm btn-danger">
+                                <i class="fas fa-trash-alt"></i> Delete
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

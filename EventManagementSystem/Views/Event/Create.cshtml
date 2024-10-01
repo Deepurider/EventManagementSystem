@@ -1,0 +1,27 @@
+﻿@model Event
+@{
+    ViewData["Title"] = "Create Event";
+}
+
+<h2 class="text-center mt-4">Create Event</h2>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form asp-action="Create" method="post">
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label"></label>
+                <input asp-for="Title" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+            </div>
+            <div class="mb-3">
+                <label asp-for="EventDate" class="form-label"></label>
+                <input asp-for="EventDate" type="date" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Create Event</button>
+            <a asp-controller="Event" asp-action="Index" class="btn btn-danger">Discard</a>
+        </form>
+    </div>
+</div>

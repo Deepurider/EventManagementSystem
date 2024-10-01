@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "College Event Management System";
+}
+
+<!-- Hero Section -->
+<header class="bg-primary text-white text-center py-5">
+    <div class="container">
+        <h1 class="display-4">Welcome to the College Event Management System</h1>
+        <p class="lead">Plan, organize, and manage college events with ease.</p>
+        <a href="@Url.Action("Register", "User")" class="btn btn-light btn-lg mx-2">Get Started</a>
+        <a href="@Url.Action("Login", "User")" class="btn btn-outline-light btn-lg mx-2">Login</a>
+    </div>
+</header>
+
+<!-- Features Section -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h2 class="display-6">Features That Make Event Management Simple</h2>
+        <div class="row mt-4">
+            <!-- Feature 1 -->
+            <div class="col-md-4">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <i class="fas fa-calendar-check fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Event Management</h5>
+                        <p class="card-text">Easily create, edit, and manage all your college events in one place.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature 2 -->
+            <div class="col-md-4">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">User-Friendly Interface</h5>
+                        <p class="card-text">Our platform is designed to be intuitive and easy to navigate for both students and administrators.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature 3 -->
+            <div class="col-md-4">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <i class="fas fa-lock fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Secure User Management</h5>
+                        <p class="card-text">Register and log in securely with reliable authentication to protect your data.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="bg-light py-5 text-center">
+    <div class="container">
+        <h2 class="display-6">How It Works</h2>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <i class="fas fa-user-plus fa-2x text-primary mb-2"></i>
+                <h5>1. Register</h5>
+                <p>Sign up as a student or admin to start managing or attending events.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-calendar-alt fa-2x text-primary mb-2"></i>
+                <h5>2. Create or Join Events</h5>
+                <p>Create new events or join existing ones to stay up-to-date on the latest happenings.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-tasks fa-2x text-primary mb-2"></i>
+                <h5>3. Manage & Organize</h5>
+                <p>Easily manage events, invite attendees, and keep track of event details.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call-to-Action Section -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h2 class="display-6">Ready to Get Started?</h2>
+        <p class="lead">Join the platform and start managing your college events today.</p>
+        <a href="@Url.Action("Register", "User")" class="btn btn-primary btn-lg mx-2">Register Now</a>
+        <a href="@Url.Action("Login", "User")" class="btn btn-outline-primary btn-lg mx-2">Login</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+        <small>© 2024 College Event Management System. All rights reserved.</small>
+    </div>
+</footer>

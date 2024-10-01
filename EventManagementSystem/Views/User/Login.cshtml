@@ -1,0 +1,23 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h2 class="text-center mt-4">Login</h2>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form asp-action="Login" method="post">
+            <div class="mb-3">
+                <label asp-for="UserName" class="form-label"></label>
+                <input asp-for="UserName" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label"></label>
+                <input asp-for="Password" type="password" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+            <a asp-action="Register" class="btn btn-link d-block text-center">Register</a>
+        </form>
+    </div>
+</div>
